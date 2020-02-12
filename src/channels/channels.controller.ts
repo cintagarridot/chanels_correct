@@ -4,7 +4,7 @@ import {ChannelsEntity} from "./channels.entity";
 import { Crud } from '@nestjsx/crud';
 import {ChannelsService} from "./channels.service";
 
-// import {CreateChannelDto} from "./dto/create-channel.dto";
+import {CreateChannelDto} from "./dto/create-channel.dto";
 
 @Crud({
     model: {
@@ -41,8 +41,9 @@ export class ChannelsController {
     }
 
     @Post()
-    async create(@Body('channel') c: string /*CreateChannelDto*/): Promise<ChannelsEntity>{
-        return await this.channelService.create(c);
+    async create(@Body('data') data: CreateChannelDto){
+        //console.log(c);
+        return await this.channelService.create(data);
     }
 
     @Delete()

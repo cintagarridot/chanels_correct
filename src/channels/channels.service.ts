@@ -3,9 +3,9 @@ import { Repository, getRepository, DeleteResult } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
 import {ChannelsEntity} from "./channels.entity";
-// import {CreateChannelDto} from "./dto/create-channel.dto";
-import {validate} from "class-validator";
-// import {ChannelRO} from "./channels.interface";
+
+import {CreateChannelDto} from "./dto/create-channel.dto";
+
 
 
 
@@ -29,15 +29,24 @@ export class ChannelsService extends TypeOrmCrudService<ChannelsEntity> {
         return await this.channelRepository.findOne(id);
     }
 
-    async create(c: string /*CreateChannelDto*/): Promise<ChannelsEntity> {
+    async create(data: CreateChannelDto): Promise<ChannelsEntity> {
 
-        let newChannel = new ChannelsEntity();
 
-        newChannel.channel = c;
 
-        const savedChannel = await this.channelRepository.save(newChannel);
-        return savedChannel;
+        return await this.channelRepository.save(data);
 
+
+
+    }
+
+    private buildChannelRO(ch: ChannelsEntity) {
+
+        const channelRO = {
+            channel: ch.channel,
+
+        };
+
+        return {ch: channelRO};
     }
 
     async delete(idChannel: string): Promise<DeleteResult>{

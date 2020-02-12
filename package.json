@@ -34,12 +34,14 @@
     "@types/faker": "^4.1.9",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.11.0",
+    "meteor-typings": "^1.4.1",
     "mysql": "^2.18.1",
     "pg": "^7.18.1",
     "postgresql": "0.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
+    "tslib": "^1.10.0",
     "typeorm": "^0.2.22",
     "typeorm-factories": "^1.0.0",
     "typeorm-seeding": "^1.2.0"
@@ -50,7 +52,7 @@
     "@nestjs/testing": "^6.11.5",
     "@types/express": "^4.17.2",
     "@types/jest": "^24.0.25",
-    "@types/node": "^13.1.6",
+    "@types/node": "^13.7.1",
     "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
@@ -64,6 +66,7 @@
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.0",
     "tsconfig-paths": "^3.9.0",
+    "typeorm-factory": "0.0.13",
     "typescript": "^3.7.4"
   },
   "jest": {
