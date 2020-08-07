@@ -32,7 +32,7 @@
     "@nestjsx/crud": "^4.4.1",
     "@nestjsx/crud-typeorm": "^4.4.1",
     "@types/faker": "^4.1.9",
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "class-validator": "^0.11.0",
     "meteor-typings": "^1.4.1",
     "mysql": "^2.18.1",
