@@ -42,7 +42,7 @@
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
-    "typeorm": "^0.2.22",
+    "typeorm": "^0.2.25",
     "typeorm-factories": "^1.0.0",
     "typeorm-seeding": "^1.2.0"
   },
